@@ -16,6 +16,7 @@ int main()
 
     vector<ItemToPurchase> itemList;
 
+    // Prompt user for item information and push object to itemList.
     for (i = 1; i <= itemQuantity; i++) {
         ItemToPurchase currItem;
         string currName;
@@ -49,6 +50,7 @@ int main()
         cout << endl;
     }*/
     
+    // Prints Total cost for each itemList object and calculates total cost for all items.
     cout << "TOTAL COST" << endl;
     for (i = 0; i < itemList.size(); i++) {
         ItemToPurchase currItem = itemList.at(i);
