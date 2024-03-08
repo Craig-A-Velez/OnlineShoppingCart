@@ -2,19 +2,62 @@
 //
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include "ItemToPurchase.h"
+#include "header.h"
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int itemQuantity = 2;
+    int i;
+    int totalCost = 0;
+
+    vector<ItemToPurchase> itemList;
+
+    for (i = 1; i <= itemQuantity; i++) {
+        ItemToPurchase currItem;
+        string currName;
+        int currPrice;
+        int currQuantity;
+
+        cout << "Item " << i << endl;
+        cout << "Enter the item name:" << endl;
+        getline(cin, currName);
+        cout << "Enter the item price:" << endl;
+        cin >> currPrice;
+        cout << "Enter the item quantity:" << endl;
+        cin >> currQuantity;
+        cout << endl;
+        cin.ignore();
+
+        currItem.SetName(currName);
+        currItem.SetPrice(currPrice);
+        currItem.SetQuantity(currQuantity);
+
+        itemList.push_back(currItem);
+    }
+
+    // Loop to test print all vector class objects.
+    /*
+    for (i = 0; i < itemList.size(); i++) {
+        ItemToPurchase currItem = itemList.at(i);
+        cout << "Name: " << currItem.GetName() << endl;
+        cout << "Price: " << currItem.GetPrice() << endl;
+        cout << "Quantity: " << currItem.GetQuantity() << endl;
+        cout << endl;
+    }*/
+    
+    cout << "TOTAL COST" << endl;
+    for (i = 0; i < itemList.size(); i++) {
+        ItemToPurchase currItem = itemList.at(i);
+        totalCost = totalCost + (currItem.GetPrice() * currItem.GetQuantity());
+        cout << currItem.GetName() << " " << currItem.GetQuantity() << " @ $" << currItem.GetPrice() << " = $" << (currItem.GetPrice() * currItem.GetQuantity()) << endl;
+    }
+
+    cout << endl;
+    cout << "Total: $" << totalCost << endl;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
