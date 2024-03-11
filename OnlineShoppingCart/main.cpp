@@ -6,9 +6,7 @@
 #include <vector>
 #include "ItemToPurchase.h"
 #include "header.h"
-// #include "Customer.h"
 #include "ShoppingCart.h"
-// #include "Order.h"
 
 using namespace std;
 

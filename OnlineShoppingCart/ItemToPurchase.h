@@ -23,7 +23,6 @@ class ItemToPurchase {
 		void PrintItemDescription() const;
 
 	private:
-		//int itemID;
 		string itemName;
 		string itemDescription;
 		int itemPrice;

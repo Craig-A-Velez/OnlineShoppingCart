@@ -2,7 +2,6 @@
 #include <iostream>
 
 ItemToPurchase::ItemToPurchase() {
-	// itemID = 0;
 	itemName = "none";
 	itemDescription = "none";
 	itemPrice = 0;
@@ -15,16 +14,6 @@ ItemToPurchase::ItemToPurchase(string iName, string iDesc, int iPrice, int iQuan
 	itemPrice = iPrice;
 	itemQuantity = iQuantity;
 }
-
-/*
-void ItemToPurchase::SetID(int itemIndex) {
-	itemID = 1000000 + itemIndex;
-}
-
-int ItemToPurchase::GetID() const{
-	return itemID;
-}
-*/
 
 void ItemToPurchase::SetName(string setName) { 
 	itemName = setName;
