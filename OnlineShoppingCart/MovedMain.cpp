@@ -1,15 +1,12 @@
-// OnlineShoppingCart.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <vector>
 #include "ItemToPurchase.h"
 #include "header.h"
-using namespace std;
+#include "Customer.h"
+#include "Order.h"
 
-int main()
-{
+int ignore() {
     int itemQuantity = 2;
     int i;
     int totalCost = 0;
@@ -48,8 +45,8 @@ int main()
         cout << "Price: " << currItem.GetPrice() << endl;
         cout << "Quantity: " << currItem.GetQuantity() << endl;
         cout << endl;
-    }*/
-    
+    }
+
     // Prints Total cost for each itemList object and calculates total cost for all items.
     cout << "TOTAL COST" << endl;
     for (i = 0; i < itemList.size(); i++) {
@@ -63,3 +60,4 @@ int main()
 
     return 0;
 }
+*/

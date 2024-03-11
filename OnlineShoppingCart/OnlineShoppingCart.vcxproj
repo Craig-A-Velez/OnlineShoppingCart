@@ -127,12 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Coupon.cpp" />
     <ClCompile Include="ItemToPurchase.cpp" />
-    <ClCompile Include="OnlineShoppingCart.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ShoppingCart.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Coupon.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="ItemToPurchase.h" />
+    <ClInclude Include="ShoppingCart.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
