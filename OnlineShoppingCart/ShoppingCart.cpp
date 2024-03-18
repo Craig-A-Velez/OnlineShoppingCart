@@ -145,6 +145,7 @@ void ShoppingCart::ApplyCoupon(Coupon coupToApply) {
 	cout << "Applied coupon: " << appliedCoupon.GetCode();
 }
 
+// Returns Coupon object that is currently applied to shopping cart.
 Coupon ShoppingCart::GetCoupon() {
 	return appliedCoupon;
 }

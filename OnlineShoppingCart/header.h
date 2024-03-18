@@ -31,6 +31,7 @@ ItemToPurchase newItem() {
 	return currItem;
 }
 
+// Returns Coupon class object from vector based on coupon code element
 Coupon FindCouponByCode(string codeToFind, vector<Coupon> coupVector) {
 	int i;
 	int coupNum = coupVector.size();
@@ -49,19 +50,11 @@ Coupon FindCouponByCode(string codeToFind, vector<Coupon> coupVector) {
 
 }
 
+// Prints menu and handles menu commands based on user input.
 void PrintMenu(ShoppingCart shopCart, vector<Coupon> coupVector) {
 	string userCommand;
 
-	cout << "MENU" << endl;
-	cout << "a - Add item to cart" << endl;
-	cout << "d - Remove item from cart" << endl;
-	cout << "c - Change item quantity" << endl;
-	cout << "i - Output items' descriptions" << endl;
-	cout << "o - Output shopping cart" << endl;
-	cout << "v - Apply coupon code to shopping cart" << endl; 
-	cout << "q - Quit" << endl;
-	cout << endl;
-
+	// User command handler. Will not trigger on first occurance since userCommand string is not set.
 	while (userCommand != "q") {
 
 		if (userCommand == "a") {
@@ -103,6 +96,17 @@ void PrintMenu(ShoppingCart shopCart, vector<Coupon> coupVector) {
 			shopCart.ApplyCoupon(FindCouponByCode(codeText, coupVector));
 
 		}
+
+		// Moved menu character-out within while loop to print prior to each prompt.
+		cout << endl;
+		cout << "MENU" << endl;
+		cout << "a - Add item to cart" << endl;
+		cout << "d - Remove item from cart" << endl;
+		cout << "c - Change item quantity" << endl;
+		cout << "i - Output items' descriptions" << endl;
+		cout << "o - Output shopping cart" << endl;
+		cout << "v - Apply coupon code to shopping cart" << endl;
+		cout << "q - Quit" << endl;
 
 		cout << endl;
 		cout << "Choose an option: ";
